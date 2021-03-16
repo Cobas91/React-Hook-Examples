@@ -2,12 +2,14 @@ const { useState, useEffect, createContext, useContext, useRef } = require("reac
 
 /**
  * useRef
+ * Access a html element with the tag ref=NameofVariable
  */
 const myBtn = useRef(null)
 const clickButton = () => myBtn.current.click()
 
 /**
  * useState Hook
+ * Access to the State of a Component like this.setState()
  */
 function App() {
     const [count, setCount] = useState(0)
@@ -16,6 +18,7 @@ function App() {
 
 /**
  * useEffekt Hook
+ * On Load Event, Refresh Event and "disconnect" event
  */
 useEffect(()=>{
     console.log("This Message will show on every Update on this Component!")
@@ -36,6 +39,8 @@ useEffect(()=>{
 
 /**
  * createContext Hook
+ * You can Access some kind of Data like the props. You dont have to pass all the Data down to the last Component to use it.
+ * You can refer the Data in this Component you need them
  */
 const randomData = {
     firstname: "John",
